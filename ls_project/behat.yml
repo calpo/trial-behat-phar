@@ -1,0 +1,9 @@
+# behat.yml
+default:
+  # ...
+  extensions:
+    /Users/calpo/projects/php/behat_trial/with_phar/mink_extension.phar:
+#      mink_loader: 'mink-VERSION.phar'
+      mink_loader: '/Users/calpo/projects/php/behat_trial/with_phar/mink.phar'
+      base_url:    'http://oshiete.goo.ne.jp/'
+      goutte:      ~

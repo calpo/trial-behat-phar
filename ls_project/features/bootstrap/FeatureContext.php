@@ -1,6 +1,4 @@
 <?php
-require_once '/Users/calpo/projects/php/behat_trial/with_phar/mink_extension.phar';
-
 use Behat\Behat\Context\ClosuredContextInterface,
     Behat\Behat\Context\TranslatedContextInterface,
     Behat\Behat\Context\BehatContext,
