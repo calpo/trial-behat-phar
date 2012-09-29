@@ -1,4 +1,6 @@
 <?php
+//require_once '/Users/calpo/projects/php/behat_trial/with_phar/mink_extension.phar';
+
 use Behat\Behat\Context\ClosuredContextInterface,
     Behat\Behat\Context\TranslatedContextInterface,
     Behat\Behat\Context\BehatContext,
@@ -33,6 +35,13 @@ class FeatureContext extends MinkContext
     /** @Given /^I am in a directory "([^"]*)"$/ */
     public function iAmInADirectory($dir)
     {
+      $this->getSession()
+        ->getDriver()
+        ->getClient()
+        ->setServerParameters(['HTTP_USER_AGENT' => 'KDDI-CA39 UP.Browser/6.2.0.13.1.5 (GUI) MMP/2.0']);
+        $this->getSession()->setRequestHeader('x-up-subno', '10msimmsim000_vr.ezweb.ne.jp');
+
+
         if (!file_exists($dir)) {
             mkdir($dir);
         }
